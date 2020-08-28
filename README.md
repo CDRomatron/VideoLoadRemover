@@ -22,6 +22,8 @@ Note how low the values go in the correct circumstances, then click stop. In the
 
 To test the software, click start, and watch the Is Loading checkbox in the bottom right corner. If the program believes the game is loading, the box will be ticked, and when it is not loading, it will be unticked.
 
+You will want to set FPS to your games framerate or capture cards frame rate.
+
 When you are happy with your configuration, click "Save Settings". You can also load your settings at a later date.
 
 ### Running
@@ -29,6 +31,12 @@ Now, start Livesplit, go to Edit Layout, and add a "Scriptable Autosplitter". Se
 
 If you want to test your settings, you can also use the VideoLoadTimer.asl file, which is always paused except on loading screens.
 
+## Having issues?
+Try the following: 
+ - Increasing/Decreasing the threshold value
+ - Try taking another screenshot
+ - If you are experiencing lag, try reduce the FPS value
+ 
 ## Building from source
 Clone the solution, and build. This application does not currently have any dependancies.
 
