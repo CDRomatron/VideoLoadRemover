@@ -4,6 +4,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Windows;
@@ -211,6 +212,20 @@ namespace VideoLoadRemover
             {
                 MessageBox.Show("Save failed, is the image or livesplit open?\n" + ex.Message);
             }
+        }
+
+        private void textChangedEventHandler(object sender, TextChangedEventArgs args)
+        {
+            if (tbx_X != null && String.IsNullOrWhiteSpace(tbx_X.Text)) tbx_X.Text = "0";
+            if (tbx_Y != null && String.IsNullOrWhiteSpace(tbx_Y.Text)) tbx_Y.Text = "0";
+            if (tbx_W != null && String.IsNullOrWhiteSpace(tbx_W.Text)) tbx_W.Text = "0";
+            if (tbx_H != null && String.IsNullOrWhiteSpace(tbx_H.Text)) tbx_H.Text = "0";
+        }
+
+        private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
         }
     }
 }

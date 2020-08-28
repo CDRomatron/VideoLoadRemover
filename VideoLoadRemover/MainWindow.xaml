@@ -12,10 +12,10 @@
         <CheckBox x:Name="cbx_Loading" Content="Is Loading?" HorizontalAlignment="Left" Margin="381,274,0,0" VerticalAlignment="Top" IsEnabled="False"/>
         <Image x:Name="imgPreview" HorizontalAlignment="Left" Height="150
                " Margin="344,16,0,0" VerticalAlignment="Top" Width="150" Stretch="None"/>
-        <TextBox x:Name="tbx_X" HorizontalAlignment="Left" Height="23" Margin="33,72,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="51"/>
-        <TextBox x:Name="tbx_Y" HorizontalAlignment="Left" Height="23" Margin="133,72,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="41"/>
-        <TextBox x:Name="tbx_W" HorizontalAlignment="Left" Height="23" Margin="33,105,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="51"/>
-        <TextBox x:Name="tbx_H" HorizontalAlignment="Left" Height="23" Margin="133,105,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="41"/>
+        <TextBox x:Name="tbx_X" HorizontalAlignment="Left" Height="23" Margin="33,72,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="51" TextChanged="textChangedEventHandler" PreviewTextInput="NumberValidationTextBox"/>
+        <TextBox x:Name="tbx_Y" HorizontalAlignment="Left" Height="23" Margin="133,72,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="41" TextChanged="textChangedEventHandler" PreviewTextInput="NumberValidationTextBox"/>
+        <TextBox x:Name="tbx_W" HorizontalAlignment="Left" Height="23" Margin="33,105,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="51" TextChanged="textChangedEventHandler" PreviewTextInput="NumberValidationTextBox"/>
+        <TextBox x:Name="tbx_H" HorizontalAlignment="Left" Height="23" Margin="133,105,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="41" TextChanged="textChangedEventHandler" PreviewTextInput="NumberValidationTextBox"/>
         <Button x:Name="btn_Save" Content="save settings" HorizontalAlignment="Left" Margin="189,72,0,0" VerticalAlignment="Top" Width="75" Click="btnSave_Click" Height="25"/>
         <Button x:Name="btn_Image" Content="Save Load-Screen" HorizontalAlignment="Left" Margin="100,249,0,0" VerticalAlignment="Top" Width="118" Click="btnImage_Click"/>
         <CheckBox x:Name="cbx_Preview" Content="Preview" HorizontalAlignment="Left" Margin="401,172,0,0" VerticalAlignment="Top" IsChecked="True"/>
